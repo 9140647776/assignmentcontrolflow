@@ -1,0 +1,484 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "3e4dfa06-705d-4f57-8ae3-3fee272be74c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter a number: 3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "positive number\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = float(input(\"enter a number:\"))\n",
+    "if num>0:\n",
+    "    print(\"positive number\")\n",
+    "elif num==0:\n",
+    "    print(\"zero\")\n",
+    "else:\n",
+    "    print(\"negative number\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "e902cc98-64aa-4f02-80b8-2f3da1542439",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter your age: 19\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you are eligible to vote.\n"
+     ]
+    }
+   ],
+   "source": [
+    "age=int(input(\"enter your age:\"))\n",
+    "if age >= 18:\n",
+    "    print(\"you are eligible to vote.\")\n",
+    "else:\n",
+    "    print(\"you are not eligible to vote yet.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "baf606d9-b93a-4896-8682-1e12241e9c47",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "def max(a,b):\n",
+    "    if a>=b:\n",
+    "        return a\n",
+    "    else:\n",
+    "        return b\n",
+    "a=2\n",
+    "b=4\n",
+    "print(max(a,b))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "91ca92be-47f6-4897-95fe-60a5a5943ec5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def checkleap(year):\n",
+    "    if((year%400==0)or(year%100!=0)and(year%4==0)):\n",
+    "        print(\"given year is a leap year\");\n",
+    "    else:\n",
+    "        print(\"given year is not a leap year\")\n",
+    "        year=int(input(\"enter the number:\"))\n",
+    "        checkleap(year)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "c02abc9e-5afd-410a-b69e-c733f341ef14",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "given year is not a leap year\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter the number: 2002\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "given year is not a leap year\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter the number: 1700\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "given year is not a leap year\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter the number: 1998\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "given year is not a leap year\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter the number: 2000\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "given year is a leap year\n"
+     ]
+    }
+   ],
+   "source": [
+    "checkleap(1785)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "21a2753e-7dae-44ec-abe2-d1761d0b8cdd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter a character: h\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the character'h'is a consonant!\n"
+     ]
+    }
+   ],
+   "source": [
+    "character=input(\"enter a character:\")\n",
+    "vowels=['a','e','i','o','u']\n",
+    "if character in vowels:\n",
+    "    print(f\"the character'{character}'is a vowel!\")\n",
+    "else:\n",
+    "    print(f\"the character'{character}'is a consonant!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "452ca71d-c973-4cf5-9101-e4e7d692e63d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter any number to test whether it is odd or even: 65\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the provided number is odd\n"
+     ]
+    }
+   ],
+   "source": [
+    "num=int(input(\"enter any number to test whether it is odd or even:\"))\n",
+    "if (num%2)==0:\n",
+    "        print(\"the number is even\")\n",
+    "else:\n",
+    "        print(\"the provided number is odd\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "552429fc-4af8-46fe-a24d-6fb1618887f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_number = 7\n",
+    "abs_value = abs(my_number)\n",
+    "print(abs_value)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "ea94bdb1-af62-4838-86e0-56c73e38fb9d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter a: 10\n",
+      "enter b: 15\n",
+      "enter c: 26\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "greater= 26\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=int(input(\"enter a:\"))\n",
+    "b=int(input(\"enter b:\"))\n",
+    "c=int(input(\"enter c:\"))\n",
+    "if a>b:\n",
+    "    if a>c:\n",
+    "        g=a\n",
+    "    else:\n",
+    "        g=c\n",
+    "else:\n",
+    "    if b>c:\n",
+    "        g=b\n",
+    "    else:\n",
+    "        g=c\n",
+    "print(\"greater=\",g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "6a759893-3b99-4fe1-a4b2-71af456dc185",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "no\n"
+     ]
+    }
+   ],
+   "source": [
+    "def ispalindrome(s):\n",
+    "    return s==s[::-1]\n",
+    "s = \"punjabi\"\n",
+    "ans = ispalindrome(s)\n",
+    "if ans:\n",
+    "    print(\"yes\")\n",
+    "else:\n",
+    "    print(\"no\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "58660fa2-a569-4dd7-a1c1-d22b2e784e4b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "not a leap year\n"
+     ]
+    }
+   ],
+   "source": [
+    "def checkyear(year):\n",
+    "    import calendar\n",
+    "    return(calendar.isleap(year))\n",
+    "year = 20001\n",
+    "if (checkyear(year)):\n",
+    "    print(\"leap year\")\n",
+    "else:\n",
+    "    print(\"not a leap year\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "8bc0d8a7-cc26-46af-8f3a-d4818ed7f5e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter a person age. 18\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the person is not an infant.\n",
+      "the person is a child.\n",
+      "the person is not a teenager.\n"
+     ]
+    }
+   ],
+   "source": [
+    "age=int(input('enter a person age.'))\n",
+    "if age <=1:\n",
+    "    print('the person is an infant.')\n",
+    "else:\n",
+    "    print('the person is not an infant.')\n",
+    "if age>1 and age>13:\n",
+    "    print('the person is a child.')\n",
+    "else:\n",
+    "    ('the person is not an infant.')\n",
+    "if age <=13 and age >20:\n",
+    "    print('the person is a teenager.')\n",
+    "else:\n",
+    "    print('the person is not a teenager.')\n",
+    "if age >=20:\n",
+    "    print('the person is an adult.')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "7da8fe55-6442-4a9d-b12a-25c299ebbcdf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def valid(a,b,c):\n",
+    "    if ((a+b+c==180) and a!=0 and b!=0 and c!=0):\n",
+    "        return true\n",
+    "    else:\n",
+    "        return false\n",
+    "if __name__ == \"__main_\":\n",
+    "    a=60\n",
+    "    b=40\n",
+    "    c=80\n",
+    "    if (valid(a,b,c)):\n",
+    "        print(\"valid\")\n",
+    "    else:\n",
+    "        print(\"invalid\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "7a24f7cb-94bd-403e-9f8d-1fb62db2c704",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter your mark 72\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you got B grade\n"
+     ]
+    }
+   ],
+   "source": [
+    "m=int(input(\"enter your mark\"))\n",
+    "if(m>=80):\n",
+    "    print(\"you got A grade\")\n",
+    "elif(m>=60):\n",
+    "    print(\"you got B grade\")\n",
+    "elif(m>=40):\n",
+    "    print(\"you got C grade\")\n",
+    "else:\n",
+    "    print(\"failed in this exam\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e1993770-5b49-4a73-b9d7-42ef480b6fe8",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+def check(ch):
+if (ch >= 'A' and ch <= 'Z'):
+print(ch,"is an uppercase character");
+elif (ch >= 'a' and ch <= 'z'):
+print(ch,"is a lowercase character");
+else:
+print(ch,"is not an alphabetic character");
+output
+A is an uppercase character 
+a is an lowercase character
+o is not an alphabetic character
